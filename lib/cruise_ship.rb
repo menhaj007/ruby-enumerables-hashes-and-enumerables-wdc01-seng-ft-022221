@@ -14,15 +14,14 @@ def select_winner(passengers)
   #   winner = name
   # end
   # end
-  passengers.each do |suite, name|
-    winner = ""
-    if (suite == :suite_a)
-      if (name[0] ="A")
-        winner = name
-      end
-    end
+  winner = ""
+passengers.each do |suite, name|
+  if suite == :suite_a && name.start_with?("A")
+    winner = name
   end
-  winner
+end
+ 
+winner
   
 end
 
